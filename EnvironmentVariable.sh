@@ -28,4 +28,4 @@ export PATH=$JAVA_HOME/bin:$PATH
 export CLASSPATH=.:$JAVA_HOME/lib'>>  $ENVIRONMENT_PATH/$JAVA_ENVIRONMENT_FILE_NAME.sh
 
 ######重新加载环境变量######
-source /etc/profile
+`source /etc/profile`
