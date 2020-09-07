@@ -4,4 +4,4 @@
 ## linux运行一键命令
 ```shell    
 sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/mrhuanglearn/jdk_jar/master/EnvironmentVariable.sh)"
-
+```
