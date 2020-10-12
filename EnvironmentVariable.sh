@@ -43,7 +43,8 @@ jdkVersionSwitch() {
   JDK_DOWNLOAD_URL='https://github.com/mrhuanglearn/jdk_jar/releases/download/v1/'$JDK_FILE_NAME_TAR
   JDK_FILE_NAME_TAR=$JDK_FILE_NAME'.tar.gz'
 
-  if [ "$JDK_INSTALL_FILE_NAME" == 'jdk1.8.0_261' ]; then
+  #支持安装32位软体
+  if [ "$JDK_INSTALL_FILE_NAME" == 'jdk1.8.0_261' ] && [ $(rpm -q glibc.i686 | grep -cn glibc.i686) -ne 0 ]; then
     yum install -y glibc.i686
   fi
 
