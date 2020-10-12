@@ -41,6 +41,7 @@ jdkVersionSwitch() {
   fi
 
   JDK_FILE_NAME_TAR=$JDK_FILE_NAME'.tar.gz'
+
   JDK_DOWNLOAD_URL='https://github.com/mrhuanglearn/jdk_jar/releases/download/v1/'$JDK_FILE_NAME_TAR
 
   #支持安装32位软体
@@ -55,7 +56,7 @@ jdkVersionSwitch() {
   fi
   #指定目录下载文件
   if [ ! -f "/tmp/$jdk_tmp/$JDK_FILE_NAME_TAR" ]; then
-    wget -P /tmp/$jdk_tmp $JDK_DOWNLOAD_URL
+    wget -P /tmp/$jdk_tmp -c $JDK_DOWNLOAD_URL
   fi
 }
 
